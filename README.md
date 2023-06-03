@@ -5,7 +5,9 @@ ESLint 通用配置
 ## 安装
 
 ```bash
-yarn add --dev @haixeefrontend/eslint-config@https://e.coding.net/haixeefrontend/utils/eslint-config.git#dist
+yarn add --dev @haixeefrontend/eslint-config@git+ssh://git@e.coding.net:haixeefrontend/utils/eslint-config.git#dist
+# 或者使用 HTTPS
+yarn add --dev @haixeefrontend/eslint-config@git+https://e.coding.net/haixeefrontend/utils/eslint-config.git#dist
 ```
 
 如果还没有安装 `eslint`，请先安装：
