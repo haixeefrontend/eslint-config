@@ -1,0 +1,28 @@
+{
+  "name": "@haixeefrontend/eslint-config",
+  "version": "1.0.0",
+  "description": "Haixee frontend common eslint config",
+  "main": "index.js",
+  "scripts": {
+    "build": "js-yaml .eslintrc.yml > .eslintrc.json"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./.eslintrc.json"
+    ]
+  },
+  "prettier": "@haixeefrontend/prettier-config",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.10.0",
+    "js-yaml": "^4.1.0",
+    "prettier": "^2.8.7"
+  },
+  "peerDependencies": {
+    "eslint": "^8.37.0"
+  }
+}
