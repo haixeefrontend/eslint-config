@@ -10,16 +10,16 @@ yarn add --dev @haixeefrontend/eslint-config@git+ssh://git@e.coding.net:haixeefr
 yarn add --dev @haixeefrontend/eslint-config@git+https://e.coding.net/haixeefrontend/utils/eslint-config.git#dist
 ```
 
-如果还没有安装 `eslint`，请先安装：
+如果还没有安装 `eslint` 及相关插件，请先安装：
 
 ```bash
-yarn add --dev eslint
+yarn add --dev eslint eslint-plugin-import eslint-plugin-prettier eslint-plugin-vue
 ```
 
-如果使用了 `typescript`，请安装 `@typescript-eslint/parser` 和 `@typescript-eslint/eslint-plugin`：
+如果使用了 `typescript`，请安装 `@typescript-eslint/parser`、`@typescript-eslint/eslint-plugin` 和 `eslint-import-resolver-typescript`：
 
 ```bash
-yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
 ```
 
 然后在项目的 `package.json` 中添加以下配置：

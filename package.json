@@ -3,8 +3,18 @@
   "version": "1.0.0",
   "description": "Haixee frontend common eslint config",
   "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js"
+    },
+    "./javascript": {
+      "import": "./index.javascript.js",
+      "require": "./index.javascript.js"
+    }
+  },
   "scripts": {
-    "build": "js-yaml .eslintrc.yml > .eslintrc.json"
+    "build": "js-yaml .eslintrc.yml > .eslintrc.json && js-yaml .eslintrc.javascript.yml > .eslintrc.javascript.json"
   },
   "eslintConfig": {
     "extends": [

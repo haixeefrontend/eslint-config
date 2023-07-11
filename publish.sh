@@ -16,7 +16,7 @@ mkdir dist
 
 # copy files
 
-cp package.json index.js .eslintrc.json README.md dist
+cp package.json index.js .eslintrc.json .eslintrc.*.json README.md dist
 
 # navigate into the build output directory
 cd dist

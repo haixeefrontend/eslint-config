@@ -4,11 +4,9 @@ env:
   es2021: true
   node: true
 extends:
-  - eslint:recommended
-  - plugin:import/recommended
+  - './.eslintrc.javascript.json'
   - plugin:import/typescript
   - 'plugin:@typescript-eslint/recommended'
-  - plugin:vue/strongly-recommended
 parser: vue-eslint-parser
 parserOptions:
   ecmaVersion: latest
@@ -24,17 +22,10 @@ settings:
   import/resolver:
     typescript: true
     node: true
-globals:
-  defineEmits: readonly
-  defineExpose: readonly
-  defineProps: readonly
-  defineOptions: readonly
-  JSX: readonly
 
 plugins:
   - '@typescript-eslint'
-  - 'vue'
-  - prettier
+
 ignorePatterns:
   - 'node_modules/**/*'
   # Build result
@@ -70,28 +61,8 @@ rules:
   # Not intended but it is easier for api requesting
   '@typescript-eslint/no-explicit-any': off
 
-  vue/max-attributes-per-line: off
-  vue/html-indent: off
-  vue/multi-word-component-names: off
-  vue/singleline-html-element-content-newline: off
-  vue/no-v-for-template-key: off
-  vue/no-v-for-template-key-on-child: error
-  vue/html-self-closing:
-    - warn
-    - html:
-        void: any
-
-  prettier/prettier: error
-
   # TypeScript would do the checking
   import/no-unresolved: off
-  import/order:
-    - error
-    - groups: ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index', 'object', 'type']
-      newlines-between: always
-      alphabetize:
-        order: asc
-        caseInsensitive: false
 
 overrides:
   - files:
