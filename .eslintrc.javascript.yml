@@ -63,9 +63,7 @@ rules:
   vue/html-indent:
     - error
     - 2
-  vue/multi-word-component-names:
-    - warn
-    - always
+  vue/multi-word-component-names: warn
   vue/no-v-for-template-key: off
   vue/no-v-for-template-key-on-child: error
   vue/html-self-closing:
