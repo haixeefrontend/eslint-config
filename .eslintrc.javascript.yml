@@ -61,8 +61,8 @@ rules:
     - singleline: 4
       multiline: 1
   vue/html-indent:
-    - warn
-    - 0
+    - error
+    - 2
   vue/multi-word-component-names:
     - warn
     - always
