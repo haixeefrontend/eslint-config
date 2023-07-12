@@ -39,3 +39,7 @@ yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint
 ## 编译及发布
 
 确保本地已经配置好 `git` 后，使用 `bash` 兼容的 `shell`，执行 `./publish.sh` 即可。
+
+## License
+
+This config is licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
