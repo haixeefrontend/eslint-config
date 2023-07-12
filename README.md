@@ -1,13 +1,13 @@
 # @haixeefrontend/eslint-config
 
-ESLint 通用配置
+ESLint 通用配置，适用于 Vue 项目。
 
 ## 安装
 
 ```bash
-yarn add --dev @haixeefrontend/eslint-config@git+ssh://git@e.coding.net:haixeefrontend/utils/eslint-config.git#dist
+yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/latest/download/eslint-config.tgz
 # 或者使用 HTTPS
-yarn add --dev @haixeefrontend/eslint-config@git+https://e.coding.net/haixeefrontend/utils/eslint-config.git#dist
+yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/latest/download/eslint-config.tgz
 ```
 
 如果还没有安装 `eslint` 及相关插件，请先安装：
@@ -37,6 +37,12 @@ yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint
 如果你使用的是 VSCode，可以安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
 
 ## 编译及发布
+
+### 发布到 GitHub Release
+
+编辑 package.json 中的 version 字段，然后推送到 GitHub，GitHub Action 会自动编译并发布到 GitHub Release。
+
+### 发布到 Coding.net (已废弃)
 
 确保本地已经配置好 `git` 后，使用 `bash` 兼容的 `shell`，执行 `./publish.sh` 即可。
 
