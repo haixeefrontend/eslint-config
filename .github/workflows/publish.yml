@@ -1,0 +1,53 @@
+name: Publish to Release
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check package.json version
+        run: |
+          echo "Checking package.json version..."
+          echo "PACKAGE_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+          echo "Package version is $PACKAGE_VERSION"
+
+      - name: Check Git Tags
+        run: |
+          echo "Checking Git Tags..."
+          echo "GIT_TAGS=$(git tag --list)" >> $GITHUB_ENV
+          echo "Git Tags are $GIT_TAGS"
+
+      - name: Create Git Tag
+        if: ${{ !contains(env.GIT_TAGS, env.PACKAGE_VERSION) }}
+        run: |
+          echo "Creating Git Tag..."
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git tag $PACKAGE_VERSION
+          git push origin $PACKAGE_VERSION
+
+      - name: Build Package
+        run: |
+          yarn install
+          yarn build
+          yarn pack
+
+      - name: Rename Package
+        run: |
+          mv *.tgz "eslint-config.tgz"
+
+      - name: Publish Package
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "eslint-config.tgz"
+          tag_name: ${{ env.PACKAGE_VERSION }}
