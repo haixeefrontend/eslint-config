@@ -1,6 +1,6 @@
 {
   "name": "@haixeefrontend/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Haixee frontend common eslint config",
   "license": "CC-BY-SA-4.0",
   "main": "index.js",
@@ -14,6 +14,12 @@
       "require": "./index.javascript.js"
     }
   },
+  "files": [
+    "index.js",
+    "index.*.js",
+    ".eslintrc.json",
+    ".eslintrc.javascript.json"
+  ],
   "scripts": {
     "build": "js-yaml .eslintrc.yml > .eslintrc.json && js-yaml .eslintrc.javascript.yml > .eslintrc.javascript.json"
   },
