@@ -30,7 +30,7 @@ jobs:
       - name: Check Git Tags
         run: |
           echo "Checking Git Tags..."
-          echo "GIT_TAGS='$(git tag --list)'" >> $GITHUB_ENV
+          echo "GIT_TAGS=\"$(git tag --list | tr '\n' ' ')\"" >> $GITHUB_ENV
 
       - name: Echo Git Tags
         run: |
