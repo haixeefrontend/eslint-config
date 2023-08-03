@@ -14,6 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          # Get all tags for the repository
+          fetch-depth: 0
 
       - name: Check package.json version
         run: |
