@@ -1,13 +1,19 @@
 # @haixeefrontend/eslint-config
 
+![GitHub release](https://img.shields.io/github/v/release/haixeefrontend/eslint-config?style=flat-square)
+
 ESLint 通用配置，适用于 Vue 项目。
 
 ## 安装
 
 ```bash
 yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/latest/download/eslint-config.tgz
-# 或者使用 HTTPS
-yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/latest/download/eslint-config.tgz
+```
+
+或者安装特定版本的配置：
+
+```bash
+yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/download/1.0.2/eslint-config.tgz
 ```
 
 如果还没有安装 `eslint` 及相关插件，请先安装：
@@ -24,10 +30,11 @@ yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint
 
 然后在项目的 `package.json` 中添加以下配置：
 
-```json
+```jsonc
 {
   "eslintConfig": {
     "extends": "@haixeefrontend/eslint-config"
+    // 默认配置包含了 TypeScript 的配置，如果仅有 JavsScript，也可以 "@haixeefrontend/eslint-config/javascript"
   }
 }
 ```
