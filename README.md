@@ -1,31 +1,23 @@
-# @haixeefrontend/eslint-config
-
-![GitHub release](https://img.shields.io/github/v/release/haixeefrontend/eslint-config?style=flat-square)
+# @haixee/eslint-config
 
 ESLint 通用配置，适用于 Vue 项目。
 
 ## 安装
 
 ```bash
-yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/latest/download/eslint-config.tgz
-```
-
-或者安装特定版本的配置：
-
-```bash
-yarn add --dev @haixeefrontend/eslint-config@https://github.com/haixeefrontend/eslint-config/releases/download/1.0.2/eslint-config.tgz
+yarn add -D @haixee/eslint-config
 ```
 
 如果还没有安装 `eslint` 及相关插件，请先安装：
 
 ```bash
-yarn add --dev eslint eslint-plugin-import eslint-plugin-prettier eslint-plugin-vue
+yarn add -D eslint eslint-plugin-import eslint-plugin-prettier eslint-plugin-vue
 ```
 
 如果使用了 `typescript`，请安装 `@typescript-eslint/parser`、`@typescript-eslint/eslint-plugin` 和 `eslint-import-resolver-typescript`：
 
 ```bash
-yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
 ```
 
 然后在项目的 `package.json` 中添加以下配置：
@@ -33,25 +25,23 @@ yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint
 ```jsonc
 {
   "eslintConfig": {
-    "extends": "@haixeefrontend/eslint-config"
-    // 默认配置包含了 TypeScript 的配置，如果仅有 JavsScript，也可以 "@haixeefrontend/eslint-config/javascript"
+    "extends": "@haixee/eslint-config"
   }
 }
 ```
 
+> [!NOTE]
+> 默认配置包含了 TypeScript + Vue 的配置，如果仅有 JavaScript + Vue，可以将上述值改为 "@haixee/eslint-config/javascript"
+
 ## 使用
 
-如果你使用的是 VSCode，可以安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)。
+如果你使用的是 VSCode，需要安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)，其他 IDE 也有相应插件。
 
-## 编译及发布
+## 编译与发布
 
-### 发布到 GitHub Release
+本仓库启用了 GitHub Actions 自动编译，只需将代码推送到 `master` 分支即可。
 
-编辑 package.json 中的 version 字段，然后推送到 GitHub，GitHub Action 会自动编译并发布到 GitHub Release。
-
-### 发布到 Coding.net (已废弃)
-
-确保本地已经配置好 `git` 后，使用 `bash` 兼容的 `shell`，执行 `./publish.sh` 即可。
+发布新版本时，需要修改 `package.json` 中的 `version` 字段，然后将修改后的代码推送到 `master` 分支。
 
 ## License
 
