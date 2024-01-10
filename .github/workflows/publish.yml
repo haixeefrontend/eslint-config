@@ -49,13 +49,21 @@ jobs:
         run: |
           yarn install
           yarn build
+
+      - name: Publish to NPM
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Pack Package
+        run: |
           yarn pack
 
       - name: Rename Package
         run: |
           mv *.tgz "eslint-config.tgz"
 
-      - name: Publish Package
+      - name: Publish to Release
         if: ${{ !contains(env.GIT_TAGS, env.PACKAGE_VERSION) }}
         uses: softprops/action-gh-release@v1
         with:
