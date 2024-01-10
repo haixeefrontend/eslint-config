@@ -27,11 +27,13 @@ plugins:
   - '@typescript-eslint'
 
 ignorePatterns:
+  - '.vscode/**/*'
   - 'node_modules/**/*'
   # Build result
   - '/dist/**/*'
+  - 'out/**/*'
+  - 'build/**/*'
   - '**/unpackage/**/*'
-  - '.vscode/**/*'
 rules:
   indent: off
   linebreak-style:
@@ -67,6 +69,7 @@ rules:
 overrides:
   - files:
       - '**/*.ts'
+      - '**/*.tsx'
     rules:
       '@typescript-eslint/no-unused-vars':
         - error

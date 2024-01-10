@@ -29,11 +29,13 @@ plugins:
   - prettier
 
 ignorePatterns:
+  - '.vscode/**/*'
   - 'node_modules/**/*'
   # Build result
   - '/dist/**/*'
+  - 'out/**/*'
+  - 'build/**/*'
   - '**/unpackage/**/*'
-  - '.vscode/**/*'
 rules:
   indent: off
   linebreak-style:
@@ -59,7 +61,7 @@ rules:
   vue/singleline-html-element-content-newline: off
   vue/max-attributes-per-line:
     - error
-    - singleline: 4
+    - singleline: 10
       multiline: 1
   vue/html-indent:
     - error
