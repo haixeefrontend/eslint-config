@@ -3,4 +3,4 @@
 /**
  * @type {import('eslint').Linter.Config}
  */
-module.exports = require('@hamster-bot/eslint-config/index')
+module.exports = require('@hamster-bot/eslint-config/node')

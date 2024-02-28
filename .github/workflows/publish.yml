@@ -45,11 +45,6 @@ jobs:
           git tag $PACKAGE_VERSION
           git push origin $PACKAGE_VERSION
 
-      - name: Build Package
-        run: |
-          yarn install
-          yarn build
-
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v3
         with:
