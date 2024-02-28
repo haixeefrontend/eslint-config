@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@haixee/prettier-config/-/prettier-config-1.0.3.tgz#6e7187cfb013e6676c0af78ef4ba2710a720c3a2"
   integrity sha512-G7j1HpSfTATf+xhAutFokAx+QgaklZithwsGxt+hHpNLNBrP8+BdbNGCdsnbVRytinhe/5u3SKUCRs7TmX+GpA==
 
-"@hamster-bot/eslint-config@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@hamster-bot/eslint-config/-/eslint-config-1.0.3.tgz#490a3dd98a60263c39e11002ab7fe8e393f5f80e"
-  integrity sha512-H7dtqatVLK7okM00T6lyIKUmHcuatqumPasyU43K/c23z3QzfHvNQZtMrDbW0Jqqy4OzYgYZ6tCUK6pgcWwiFg==
+"@hamster-bot/eslint-config@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@hamster-bot/eslint-config/-/eslint-config-1.0.4.tgz#4ad34c138f9cc0151d57d2eee4d6738401a33e11"
+  integrity sha512-PFmzBbGafNfDsKHVXQql0Oab3eSbPnYqg5qM5i9ihU0RW/X6QXDYZLrd0q7e1GAucI5sP+4u/CECAbPEcrcooA==
   dependencies:
     eslint-config-standard "^17.1.0"
 
@@ -1656,10 +1656,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.8.7:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
-  integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+prettier@^3.0.0:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
+  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
 
 punycode@^2.1.0:
   version "2.3.1"
