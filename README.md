@@ -11,7 +11,7 @@ yarn add -D @haixee/eslint-config
 如果还没有安装 `eslint` 及相关插件，请先安装：
 
 ```bash
-yarn add -D eslint eslint-plugin-import eslint-plugin-prettier eslint-plugin-promise
+yarn add -D eslint eslint-plugin-n eslint-plugin-import eslint-plugin-prettier eslint-plugin-promise
 ```
 
 ## 使用
@@ -32,6 +32,12 @@ yarn add -D eslint eslint-plugin-import eslint-plugin-prettier eslint-plugin-pro
 ### `@haixee/node`
 
 此配置适用于 Node.js 项目，如 `vite.config.ts` 等文件的配置。
+
+使用时，需要先安装 `eslint-plugin-mocha eslint-plugin-n`:
+
+```bash
+yarn add -D eslint-plugin-mocha eslint-plugin-n
+```
 
 ### `@haixee/typescript`
 
