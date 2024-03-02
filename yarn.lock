@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@haixee/prettier-config/-/prettier-config-1.0.3.tgz#6e7187cfb013e6676c0af78ef4ba2710a720c3a2"
   integrity sha512-G7j1HpSfTATf+xhAutFokAx+QgaklZithwsGxt+hHpNLNBrP8+BdbNGCdsnbVRytinhe/5u3SKUCRs7TmX+GpA==
 
-"@hamster-bot/eslint-config@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@hamster-bot/eslint-config/-/eslint-config-1.0.4.tgz#4ad34c138f9cc0151d57d2eee4d6738401a33e11"
-  integrity sha512-PFmzBbGafNfDsKHVXQql0Oab3eSbPnYqg5qM5i9ihU0RW/X6QXDYZLrd0q7e1GAucI5sP+4u/CECAbPEcrcooA==
+"@hamster-bot/eslint-config@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@hamster-bot/eslint-config/-/eslint-config-1.0.5.tgz#11de3ccb134aab55b30e0e311c2be8b46e3a7150"
+  integrity sha512-1tZ6nB6mSSkpuEe1FpnAZ5AX0hIH46Pmd/A/KovchNJGyVbNmRwCGsqjsouVKvOYVfHTJYoN3m9qWHmmaV3U3w==
   dependencies:
     eslint-config-standard "^17.1.0"
 
