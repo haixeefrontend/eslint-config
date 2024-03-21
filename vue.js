@@ -26,7 +26,7 @@ module.exports = {
     defineOptions: 'readonly',
     JSX: 'readonly',
   },
-  plugins: ['vue'],
+  plugins: ['@typescript-eslint', 'vue'],
   overrides: [
     {
       files: ['**/*.vue'],
