@@ -4,29 +4,18 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: ['./index.js', 'plugin:vue/vue3-recommended'],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    parser: '@typescript-eslint/parser',
-    ecmaFeatures: {
-      jsx: true,
-      tsx: true,
+  extends: ['./typescript.js', 'plugin:vue/vue3-essential', '@vue/eslint-config-typescript'],
+  settings: {
+    'import/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx', '.vue'],
+    'import/parser': {
+      '@typescript-eslint/parser': ['.cts', '.ts', '.mts', '.tsx'],
+      'vue-eslint-parser': ['.vue'],
     },
-    vueFeatures: {
-      filter: true,
-      interpolationAsNonHTML: false,
-    },
+    'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json|vue)$'],
   },
-  globals: {
-    defineEmits: 'readonly',
-    defineExpose: 'readonly',
-    defineProps: 'readonly',
-    defineOptions: 'readonly',
-    JSX: 'readonly',
+  rules: {
+    'import/no-unresolved': ['error', { ignore: ['\\.(coffee|scss|css|less|hbs|svg|json)$'] }],
   },
-  plugins: ['@typescript-eslint', 'vue'],
   overrides: [
     {
       files: ['**/*.vue'],
