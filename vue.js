@@ -4,7 +4,7 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: ['./typescript.js', 'plugin:vue/vue3-essential', '@vue/eslint-config-typescript'],
+  extends: ['plugin:vue/vue3-essential', '@vue/eslint-config-typescript'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -12,6 +12,8 @@ module.exports = {
     sourceType: 'module',
   },
   settings: {
+    // eslint-disable-next-line n/global-require
+    ...require('./typescript').settings,
     'import/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx', '.vue'],
     'import/parser': {
       '@typescript-eslint/parser': ['.cts', '.ts', '.mts', '.tsx'],
@@ -21,6 +23,8 @@ module.exports = {
   },
   rules: {
     'import/no-unresolved': ['error', { ignore: ['\\.(coffee|scss|css|less|hbs|svg|json)$'] }],
+    // eslint-disable-next-line n/global-require
+    ...require('./typescript').rules,
   },
   overrides: [
     {
