@@ -14,6 +14,23 @@
     "uniapp.js",
     "vue.js"
   ],
+  "exports": {
+    ".": {
+      "require": "./index.js"
+    },
+    "./node": {
+      "require": "./node.js"
+    },
+    "./typescript": {
+      "require": "./typescript.js"
+    },
+    "./uniapp": {
+      "require": "./uniapp.js"
+    },
+    "./vue": {
+      "require": "./vue.js"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "./node.js"
