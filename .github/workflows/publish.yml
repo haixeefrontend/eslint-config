@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # Get all tags for the repository
           fetch-depth: 0
@@ -44,6 +44,17 @@ jobs:
           git config --local user.name "GitHub Actions"
           git tag $PACKAGE_VERSION
           git push origin $PACKAGE_VERSION
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+
+      - name: Install Dependencies
+        run: |
+          yarn install
 
       - name: Publish to NPM
         uses: JS-DevTools/npm-publish@v3
