@@ -5,6 +5,12 @@
  */
 module.exports = {
   extends: ['./typescript.js', 'plugin:vue/vue3-essential', '@vue/eslint-config-typescript'],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    ecmaVersion: 2022,
+    sourceType: 'module',
+  },
   settings: {
     'import/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx', '.vue'],
     'import/parser': {
