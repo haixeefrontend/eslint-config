@@ -59,7 +59,7 @@ __metadata:
   resolution: "@haixee/eslint-config@workspace:."
   dependencies:
     "@haixee/prettier-config": "npm:^1.0.3"
-    "@hamster-bot/eslint-config": "npm:^1.0.6"
+    "@hamster-bot/eslint-config": "npm:^1.0.7"
     "@typescript-eslint/eslint-plugin": "npm:^7.1.0"
     "@typescript-eslint/parser": "npm:^7.1.0"
     "@vue/eslint-config-typescript": "npm:^13.0.0"
@@ -105,9 +105,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hamster-bot/eslint-config@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@hamster-bot/eslint-config@npm:1.0.6"
+"@hamster-bot/eslint-config@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@hamster-bot/eslint-config@npm:1.0.7"
   dependencies:
     eslint-config-standard: "npm:^17.1.0"
   peerDependencies:
@@ -130,7 +130,7 @@ __metadata:
       optional: true
     eslint-plugin-n:
       optional: true
-  checksum: 10c0/41b56f1d281365fd0f23bf93976a04d64591114c6f3b8567d6209d184eaf69424a3470e3ee08cd6ea6c325c193bbc9ba008d2b5081890e792da9c832f042ef0a
+  checksum: 10c0/2cd3ac42530b3a0d991c08a8bcb2ad017f7345d85e035da1f02fa66bd3fb02e7b54aeaccbf420fdddaadb21dda099e616cda3aa899548bd93a7f6ee54232ccde
   languageName: node
   linkType: hard
 
