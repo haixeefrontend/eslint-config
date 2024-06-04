@@ -18,6 +18,9 @@
     ".": {
       "require": "./index.js"
     },
+    "./index": {
+      "require": "./index.js"
+    },
     "./node": {
       "require": "./node.js"
     },
