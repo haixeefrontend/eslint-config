@@ -41,7 +41,7 @@
   },
   "prettier": "@haixee/prettier-config",
   "dependencies": {
-    "@hamster-bot/eslint-config": "^1.0.7",
+    "@hamster-bot/eslint-config": "^1.0.8",
     "@vue/eslint-config-typescript": "^13.0.0"
   },
   "devDependencies": {
