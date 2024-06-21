@@ -84,6 +84,7 @@ __metadata:
     eslint-plugin-promise: ^6.0.0
     eslint-plugin-vue: ^9.10.0
     prettier: ^3.0.0
+    vue-eslint-parser: ^9.4.2
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
