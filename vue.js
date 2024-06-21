@@ -23,9 +23,9 @@ module.exports = {
     'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json|vue)$'],
   },
   rules: {
-    'import/no-unresolved': ['error', { ignore: ['\\.(coffee|scss|css|less|hbs|svg|json)$'] }],
     // eslint-disable-next-line n/global-require
     ...require('./typescript').rules,
+    'import/no-unresolved': ['error', { ignore: ['\\.(coffee|scss|css|less|hbs|svg|json)$'] }],
   },
   overrides: [
     {
