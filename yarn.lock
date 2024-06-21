@@ -95,6 +95,8 @@ __metadata:
       optional: true
     eslint-plugin-n:
       optional: true
+    eslint-plugin-vue:
+      optional: true
   languageName: unknown
   linkType: soft
 
