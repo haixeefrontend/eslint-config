@@ -11,6 +11,7 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: 'module',
   },
+  plugins: ['import'],
   settings: {
     // eslint-disable-next-line n/global-require
     ...require('./typescript').settings,
