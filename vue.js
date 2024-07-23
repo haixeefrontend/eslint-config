@@ -4,7 +4,7 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: ['plugin:vue/vue3-essential', '@vue/eslint-config-typescript'],
+  extends: ['plugin:vue/vue3-essential', '@vue/eslint-config-typescript', '@unocss'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
