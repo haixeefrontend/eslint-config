@@ -5,7 +5,7 @@
   "license": "CC-BY-SA-4.0",
   "repository": {
     "type": "git+https",
-    "url": "https://github.com/haixeefrontend/eslint-config.git"
+    "url": "git+https://github.com/haixeefrontend/eslint-config.git"
   },
   "files": [
     "index.js",
