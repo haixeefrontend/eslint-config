@@ -1,22 +1,22 @@
-'use strict'
+import ts from '@hamster-bot/eslint-config/typescript'
 
 /**
- * @type {import('eslint').Linter.Config}
+ * @type {import('eslint').Linter.Config[]}
  */
-module.exports = {
-  extends: ['@hamster-bot/eslint-config/typescript'],
-  plugins: ['import'],
-  settings: {
-    'import/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx'],
-    'import/parser': {
-      '@typescript-eslint/parser': ['.cts', '.ts', '.mts', '.tsx'],
+const config = [
+  ...ts,
+  {
+    settings: {
+      'import-x/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx'],
+      'import-x/parser': {
+        '@typescript-eslint/parser': ['.cts', '.ts', '.mts', '.tsx'],
+      },
     },
-    'import/ignore': ['node_modules'],
-    'import/resolver': {
-      typescript: {},
+    rules: {
+      'import-x/no-unresolved': ['error'],
     },
-  },
-  rules: {
-    'import/no-unresolved': ['error'],
-  },
-}
+  }
+]
+
+export default config
+

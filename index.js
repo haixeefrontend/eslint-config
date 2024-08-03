@@ -1,6 +1,9 @@
-'use strict'
+import hamster from '@hamster-bot/eslint-config'
 
 /**
- * @type {import('eslint').Linter.Config}
+ * @type {import('eslint').Linter.Config[]}
  */
-module.exports = require('@hamster-bot/eslint-config/index')
+const config = hamster
+
+export default config
+

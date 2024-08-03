@@ -1,15 +1,18 @@
-'use strict'
+import vue from './vue.js'
 
 /**
- * @type {import('eslint').Linter.Config}
+ * @type {import('eslint').Linter.Config[]}
  */
-module.exports = {
-  env: {
-    es2023: true,
+const config = [
+  ...vue,
+  {
+    languageOptions: {
+      globals: {
+        uni: 'readonly',
+      },
+    },
+    ignores: ['**/node_modules/**/*', '/dist/**/*', '**/unpackage/**/*'],
   },
-  extends: ['./vue.js'],
-  globals: {
-    uni: 'readonly',
-  },
-  ignorePatterns: ['**/node_modules/**/*', '/dist/**/*', '**/unpackage/**/*'],
-}
+]
+
+export default config

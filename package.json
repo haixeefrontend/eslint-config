@@ -14,55 +14,42 @@
     "uniapp.js",
     "vue.js"
   ],
-  "type": "commonjs",
+  "type": "module",
   "exports": {
     ".": {
-      "require": "./index.js"
+      "import": "./index.js"
     },
     "./index": {
-      "require": "./index.js"
+      "import": "./index.js"
     },
     "./node": {
-      "require": "./node.js"
+      "import": "./node.js"
     },
     "./typescript": {
-      "require": "./typescript.js"
+      "import": "./typescript.js"
     },
     "./uniapp": {
-      "require": "./uniapp.js"
+      "import": "./uniapp.js"
     },
     "./vue": {
-      "require": "./vue.js"
+      "import": "./vue.js"
     }
   },
-  "eslintConfig": {
-    "extends": [
-      "./node.js"
-    ]
-  },
-  "prettier": "@haixee/prettier-config",
   "dependencies": {
-    "@hamster-bot/eslint-config": "^1.0.8",
+    "@hamster-bot/eslint-config": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
-    "@unocss/eslint-config": "^0.61.5",
+    "@unocss/eslint-config": "^0.61.9",
     "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint-import-resolver-typescript": "^3.5.4",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-mocha": "^10.3.0",
-    "eslint-plugin-n": "^17.7.0",
-    "eslint-plugin-prettier": "^5.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.10.0",
-    "prettier": "^3.0.0"
+    "eslint-plugin-mocha": "^10.5.0",
+    "eslint-plugin-vue": "^9.27.0"
   },
   "devDependencies": {
-    "@haixee/prettier-config": "^1.0.3",
-    "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.0.0"
   },
   "packageManager": "yarn@4.2.2"
 }
