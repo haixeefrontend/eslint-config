@@ -1,10 +1,10 @@
-import ts from '@hamster-bot/eslint-config/typescript'
+import { configs } from '@hamster-bot/eslint-config'
 
 /**
  * @type {import('eslint').Linter.Config[]}
  */
 const config = [
-  ...ts,
+  ...configs.node,
 ]
 
 export default config

@@ -1,10 +1,13 @@
 import unocss from '@unocss/eslint-config/flat'
 import pluginVue from 'eslint-plugin-vue'
 
+import ts from './typescript.js'
+
 /**
  * @type {import('eslint').Linter.Config[]}
  */
 const config = [
+  ...ts,
   ...pluginVue.configs['flat/strongly-recommended'],
   unocss,
   {

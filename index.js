@@ -1,9 +1,15 @@
-import hamster from '@hamster-bot/eslint-config'
+import base from './rules/base'
+import node from './rules/node'
+import typescript from './rules/typescript'
+import uniapp from './rules/uniapp'
+import vue from './rules/vue'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = hamster
-
-export default config
-
+export default {
+  configs: {
+    base,
+    node,
+    typescript,
+    uniapp,
+    vue,
+  },
+}

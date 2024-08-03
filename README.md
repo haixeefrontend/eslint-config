@@ -17,30 +17,30 @@ yarn add -D @haixee/eslint-config eslint
 在项目中新建 `eslint.config.mjs` 并添加以下配置：
 
 ```js
-import haixee from '@haixee/eslint-config' // 导入默认配置，也可以替换为下方的其他配置
+import haixee from '@haixee/eslint-config'
 
 export default [
-  ...haixee,
+  ...haixee.configs.base, // 导入默认配置，也可以替换为下方的其他配置
   // 你可以在这里继续添加其他自定义配置
 ]
 ```
 
 > [!NOTE]
-> 默认配置仅包含了 JavaScript 的配置，如果想要其他配置，请参考下方的配置说明。
+> 此默认配置仅包含了 JavaScript 的配置，如果想要其他配置，请参考下方的配置说明。
 
-### `@haixee/eslint-config/node`
+### `haixee.configs.node`
 
 此配置适用于 Node.js 项目，如 `vite.config.ts` 等文件的配置。
 
-### `@haixee/eslint-config/typescript`
+### `haixee.configs.typescript`
 
 此配置适用于 TypeScript 项目，请安装 `typescript` 作为 `devDependencies`。
 
-### `@haixee/eslint-config/vue`
+### `haixee.configs.vue`
 
 此配置适用于 Vue3 项目，如 `*.vue` 文件的配置。
 
-### `@haixee/eslint-config/uniapp`
+### `haixee.configs.uniapp`
 
 此配置适用于 UniApp + Vue3 项目，需安装上述 Vue 和 TypeScript 所需求的依赖。
 

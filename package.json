@@ -15,28 +15,15 @@
     "vue.js"
   ],
   "type": "module",
+  "module": "./index.js",
   "exports": {
     ".": {
       "import": "./index.js"
     },
-    "./index": {
-      "import": "./index.js"
-    },
-    "./node": {
-      "import": "./node.js"
-    },
-    "./typescript": {
-      "import": "./typescript.js"
-    },
-    "./uniapp": {
-      "import": "./uniapp.js"
-    },
-    "./vue": {
-      "import": "./vue.js"
-    }
+    "./package.json": "./package.json"
   },
   "dependencies": {
-    "@hamster-bot/eslint-config": "^2.1.1",
+    "@hamster-bot/eslint-config": "^2.2.0",
     "@unocss/eslint-config": "^0.61.9",
     "@vue/eslint-config-typescript": "^13.0.0",
     "eslint-plugin-mocha": "^10.5.0",
