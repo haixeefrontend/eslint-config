@@ -15,7 +15,7 @@ const config = [
     rules: {
       'import-x/no-unresolved': ['error'],
     },
-  }
+  },
 ]
 
 export default config
