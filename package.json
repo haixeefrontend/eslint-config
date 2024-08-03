@@ -8,11 +8,8 @@
     "url": "git+https://github.com/haixeefrontend/eslint-config.git"
   },
   "files": [
-    "index.js",
-    "node.js",
-    "typescript.js",
-    "uniapp.js",
-    "vue.js"
+    "rules",
+    "index.js"
   ],
   "type": "module",
   "module": "./index.js",
