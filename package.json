@@ -13,8 +13,10 @@
   ],
   "type": "module",
   "module": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.js"
     },
     "./package.json": "./package.json"
