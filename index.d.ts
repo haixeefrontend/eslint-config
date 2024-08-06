@@ -1,6 +1,6 @@
 import { Linter } from 'eslint'
 
-export default {
+declare const res: {
     configs: {
         base: Linter.Config,
         node: Linter.Config,
@@ -9,3 +9,5 @@ export default {
         vue: Linter.Config,
     }
 }
+
+export default res
