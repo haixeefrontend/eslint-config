@@ -1,6 +1,6 @@
 {
   "name": "@haixee/eslint-config",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Haixee frontend common eslint config",
   "license": "CC-BY-SA-4.0",
   "repository": {
