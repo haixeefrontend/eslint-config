@@ -1,5 +1,8 @@
+import eslinttsParser from '@typescript-eslint/parser'
 import unocss from '@unocss/eslint-config/flat'
 import pluginVue from 'eslint-plugin-vue'
+import globals from 'globals'
+import vueParser from 'vue-eslint-parser'
 
 import ts from './typescript.js'
 
@@ -24,7 +27,18 @@ const config = [
     },
   },
   {
-    files: ['**/*.vue'],
+    files: ['**/*.vue', '*.vue'],
+    languageOptions: {
+      parser: vueParser,
+      sourceType: 'module',
+      globals: globals.browser,
+      parserOptions: {
+        parser: eslinttsParser,
+        sourceType: 'module',
+        projectService: false,
+        extraFileExtensions: ['.vue'],
+      },
+    },
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
