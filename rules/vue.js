@@ -75,6 +75,12 @@ const config = [
       ],
       'vue/component-options-name-casing': ['error', 'PascalCase'],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
+      'vue/block-order': [
+        'error',
+        {
+          order: ['script[setup]', 'template', 'script', 'style'],
+        },
+      ],
     },
   },
 ]
