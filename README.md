@@ -1,5 +1,8 @@
 # @haixee/eslint-config
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/haixeefrontend/eslint-config/publish.yml?style=for-the-badge&link=https%3A%2F%2Fgithub.com%2Fhaixeefrontend%2Feslint-config%2Factions%2Fworkflows%2Fpublish.yml)
+![NPM Version](https://img.shields.io/npm/v/%40haixee%2Feslint-config?style=for-the-badge&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40haixee%2Feslint-config)
+
 ESLint 通用配置 (Flat Config)，适用于 Vue 项目。
 
 > [!CAUTION]
