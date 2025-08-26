@@ -40,11 +40,12 @@ jobs:
           yarn pack
 
       - name: Rename Package
+        if: ${{ steps.publish.outputs.type }}
         run: |
           mv *.tgz "eslint-config.tgz"
 
       - name: Publish to Release
-        if: ${{ !contains(env.GIT_TAGS, env.PACKAGE_VERSION) }}
+        if: ${{ steps.publish.outputs.type }}
         uses: softprops/action-gh-release@v1
         with:
           files: "eslint-config.tgz"
