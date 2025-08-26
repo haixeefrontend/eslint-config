@@ -13,7 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Publish to NPM
+        id: publish
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: public
+
+      - name: Create Git Tag
+        if: ${{ steps.publish.outputs.type }}
+        run: |
+          echo "Creating Git Tag..."
+          PACKAGE_VERSION=$(jq -r '.version' package.json)
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git tag v$PACKAGE_VERSION
+          git push origin v$PACKAGE_VERSION
+
+      - name: Pack Package
+        if: ${{ steps.publish.outputs.type }}
+        run: |
+          yarn pack      - uses: actions/checkout@v4
         with:
           # Get all tags for the repository
           fetch-depth: 0
