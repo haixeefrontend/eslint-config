@@ -1,7 +1,6 @@
-import node from './node.js'
-import typescript from './typescript.js'
+import haixee from './index.js'
 
 export default [
-  ...node,
-  ...typescript,
+  ...haixee.configs.node,
+  ...haixee.configs.typescript,
 ]
