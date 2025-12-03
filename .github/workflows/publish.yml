@@ -44,20 +44,16 @@ jobs:
           git config --local user.name "GitHub Actions"
           git tag v$PACKAGE_VERSION
           git push origin v$PACKAGE_VERSION
+          echo "PACKAGE_VERSION=$PACKAGE_VERSION" >> $GITHUB_ENV
 
       - name: Pack Package
         if: ${{ steps.publish.outputs.type }}
         run: |
           yarn pack
 
-      - name: Rename Package
-        if: ${{ steps.publish.outputs.type }}
-        run: |
-          mv *.tgz "eslint-config.tgz"
-
       - name: Publish to Release
         if: ${{ steps.publish.outputs.type }}
         uses: softprops/action-gh-release@v1
         with:
-          files: "eslint-config.tgz"
-          tag_name: ${{ env.PACKAGE_VERSION }}
+          files: eslint-config-*.tgz
+          tag_name: v${{ env.PACKAGE_VERSION }}
