@@ -27,6 +27,10 @@ const config = [
       },
     },
     ignores: ['**/node_modules/**/*', '/dist/**/*', '**/unpackage/**/*'],
+
+    rules: {
+      'multiline-comment-style': 'off', // uni-app's conditional compilation comments conflict with this rule
+    },
   },
 ]
 
