@@ -1,7 +1,7 @@
 import js from '@eslint/js'
 import { flatConfigs as importx } from 'eslint-plugin-import-x'
 
-import stylistic from './stylistic'
+import stylistic from './stylistic.js'
 
 /**
  * @type {import('eslint').Linter.Config[]}

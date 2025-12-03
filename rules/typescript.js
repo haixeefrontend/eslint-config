@@ -1,7 +1,7 @@
 import { flatConfigs as importx } from 'eslint-plugin-import-x'
 import { configs as tseslint } from 'typescript-eslint'
 
-import baseConfig from './base'
+import baseConfig from './base.js'
 
 /**
  * @type {import('eslint').Linter.Config[]}

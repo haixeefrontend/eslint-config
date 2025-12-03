@@ -1,7 +1,7 @@
 import nodePlugin from 'eslint-plugin-n'
 import globals from 'globals'
 
-import baseConfig from './base'
+import baseConfig from './base.js'
 
 /**
  * @type {import('eslint').Linter.Config[]}
