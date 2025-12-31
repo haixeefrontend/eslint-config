@@ -9,7 +9,8 @@
   },
   "files": [
     "rules",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "type": "module",
   "module": "./index.js",
