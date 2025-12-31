@@ -24,6 +24,9 @@ jobs:
           node-version: '20.x'
           cache: 'yarn'
 
+      - name: Install Dependencies
+        run: yarn install
+
         # Upgrade NPM to the latest version wo we could use trusted publishers feature
       - name: Upgrade NPM
         run: npm install -g npm@latest
