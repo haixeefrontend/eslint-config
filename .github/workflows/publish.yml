@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '20.x'
           cache: 'yarn'
@@ -32,7 +32,6 @@ jobs:
         id: publish
         uses: JS-DevTools/npm-publish@v4
         with:
-          token: ${{ secrets.NPM_TOKEN }}
           access: public
 
       - name: Create Git Tag
@@ -53,7 +52,7 @@ jobs:
 
       - name: Publish to Release
         if: ${{ steps.publish.outputs.type }}
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: eslint-config-*.tgz
           tag_name: ${{ env.PACKAGE_VERSION }}
