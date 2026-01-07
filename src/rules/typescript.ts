@@ -7,16 +7,15 @@ import baseConfig from './base.js'
 const config = defineConfig(
   baseConfig,
   tseslint.recommended,
+  // @ts-expect-error
+  importX.flatConfigs.typescript,
   {
+    name: '@haixee/typescript/rules',
     languageOptions: {
       parserOptions: {
         projectService: true,
       },
     },
-  },
-  // @ts-expect-error
-  importX.flatConfigs.typescript,
-  {
     rules: {
       '@typescript-eslint/array-type': 'error',
       'default-param-last': 'off',

@@ -12,6 +12,7 @@ const config = defineConfig(
     jsx: true,
   }),
   {
+    name: '@haixee/stylistic/rules',
     rules: {
       'comma-dangle': 'off',
       'quotes': 'off',

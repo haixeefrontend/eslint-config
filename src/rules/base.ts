@@ -10,6 +10,7 @@ const config = defineConfig(
   // @ts-expect-error
   importX.flatConfigs.recommended,
   {
+    name: '@haixee/base/ignores',
     ignores: [
       '**/.git/**',
       '**/.yarn/**',
@@ -18,6 +19,7 @@ const config = defineConfig(
     ],
   },
   {
+    name: '@haixee/base/rules',
     languageOptions: {
       ecmaVersion: 2024,
     },

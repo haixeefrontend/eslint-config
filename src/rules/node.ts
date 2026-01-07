@@ -8,6 +8,7 @@ const config = defineConfig(
   baseConfig,
   nodePlugin.configs['flat/recommended'],
   {
+    name: '@haixee/node/rules',
     languageOptions: {
       globals: globals.node,
     },

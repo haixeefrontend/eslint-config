@@ -13,6 +13,7 @@ const config = defineConfig(
   // @ts-expect-error
   unocss,
   {
+    name: '@haixee/vue/import-x-overrides',
     settings: {
       'import-x/extensions': ['.cjs', '.js', '.mjs', '.jsx', 'cts', '.ts', '.mts', '.tsx', '.vue'],
       'import-x/parser': {
@@ -26,6 +27,7 @@ const config = defineConfig(
     },
   },
   {
+    name: '@haixee/vue/rules',
     files: ['**/*.vue', '*.vue'],
     languageOptions: {
       parser: vueParser,
