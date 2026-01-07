@@ -21,11 +21,12 @@ yarn add -D @haixee/eslint-config eslint
 
 ```js
 import haixee from '@haixee/eslint-config'
+import { defineConfig } from 'eslint/config'
 
-export default [
+export default defineConfig(
   haixee.configs.base, // 导入默认配置，也可以替换为下方的其他配置
   // 你可以在这里继续添加其他自定义配置
-]
+)
 ```
 
 > [!NOTE]
