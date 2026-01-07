@@ -1,14 +1,12 @@
-import { flatConfigs as importx } from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 import { configs as tseslint } from 'typescript-eslint'
 
 import baseConfig from './base.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
-  ...baseConfig,
-  ...tseslint.recommended,
+const config = defineConfig(
+  baseConfig,
+  tseslint.recommended,
   {
     languageOptions: {
       parserOptions: {
@@ -16,7 +14,8 @@ const config = [
       },
     },
   },
-  importx.typescript,
+  // @ts-expect-error
+  importX.flatConfigs.typescript,
   {
     rules: {
       '@typescript-eslint/array-type': 'error',
@@ -46,6 +45,6 @@ const config = [
       ]
     },
   },
-]
+)
 
 export default config

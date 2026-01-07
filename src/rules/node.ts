@@ -1,13 +1,11 @@
+import { defineConfig } from 'eslint/config'
 import nodePlugin from 'eslint-plugin-n'
 import globals from 'globals'
 
 import baseConfig from './base.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
-  ...baseConfig,
+const config = defineConfig(
+  baseConfig,
   nodePlugin.configs['flat/recommended'],
   {
     languageOptions: {
@@ -28,6 +26,6 @@ const config = [
       'n/prefer-global/url': 'error',
     },
   },
-]
+)
 
 export default config

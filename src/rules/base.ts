@@ -1,14 +1,14 @@
+import { defineConfig } from 'eslint/config'
 import js from '@eslint/js'
-import { flatConfigs as importx } from 'eslint-plugin-import-x'
+import { importX } from 'eslint-plugin-import-x'
 
 import stylistic from './stylistic.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
+
+const config = defineConfig(
   js.configs.recommended,
-  importx.recommended,
+  // @ts-expect-error
+  importX.flatConfigs.recommended,
   {
     ignores: [
       '**/.git/**',
@@ -68,6 +68,6 @@ const config = [
     },
   },
   ...stylistic,
-]
+)
 
 export default config

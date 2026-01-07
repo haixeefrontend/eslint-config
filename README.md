@@ -29,25 +29,50 @@ export default [
 ```
 
 > [!NOTE]
+>
 > 此默认配置仅包含了 JavaScript 的配置，如果想要其他配置，请参考下方的配置说明。
 
-### `haixee.configs.node`
+- `haixee.configs.node` (`@haixee/node`)
 
-此配置适用于 Node.js 项目，如 `vite.config.ts` 等文件的配置。
+适用于 Node.js 项目，如 `vite.config.ts` 等文件的配置。
 
-### `haixee.configs.typescript`
+- `haixee.configs.typescript` (`@haixee/typescript`)
 
-此配置适用于 TypeScript 项目，请安装 `typescript` 作为 `devDependencies`。
+适用于 TypeScript 项目，请安装 `typescript` 作为 `devDependencies`。
 
-### `haixee.configs.vue`
+- `haixee.configs.vue` (`@haixee/vue`)
 
-此配置适用于 Vue3 项目，如 `*.vue` 文件的配置。
+适用于 Vue3 项目，如 `*.vue` 文件的配置。
 
-### `haixee.configs.uniapp`
+- `haixee.configs.uniapp` (`@haixee/uniapp`)
 
-此配置适用于 UniApp + Vue3 项目，需安装上述 Vue 和 TypeScript 所需求的依赖。
+适用于 UniApp + Vue3 项目，需安装上述 Vue 和 TypeScript 所需求的依赖。
 
-如果你使用的是 VSCode，需要安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)，其他 IDE 也有相应插件。
+规则的依赖关系如下：
+
+```mermaid
+graph LR
+  A["@haixee/base"] --> B["@eslint/js/recommended"]
+  A --> C["import-x/recommended"]
+  A --> D["@stylistic/recommended"]
+
+  E["@haixee/node"] --> A
+  E --> F["n/recommended"]
+
+  G["@haixee/typescript"] --> A
+  G --> H["@typescript-eslint/recommended"]
+  G --> I["import-x/typescript"]
+
+  J["@haixee/vue"] --> A
+  J --> K["vue/strongly-recommended"]
+  J --> L["unocss/recommended"]
+
+  M["@haixee/uniapp"] --> J
+```
+
+> [!NOTE]
+>
+> 如果你使用的是 VSCode，需要安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)，其他 IDE 也有相应插件。
 
 ## 编译与发布
 

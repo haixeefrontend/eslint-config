@@ -1,9 +1,9 @@
+import { defineConfig } from 'eslint/config'
+
 import vue from './vue.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
+
+const config = defineConfig(
   ...vue,
   {
     languageOptions: {
@@ -32,6 +32,6 @@ const config = [
       'multiline-comment-style': 'off', // uni-app's conditional compilation comments conflict with this rule
     },
   },
-]
+)
 
 export default config

@@ -1,17 +1,16 @@
 import eslinttsParser from '@typescript-eslint/parser'
 import unocss from '@unocss/eslint-config/flat'
+import { defineConfig } from 'eslint/config'
 import pluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
 import vueParser from 'vue-eslint-parser'
 
 import ts from './typescript.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
-  ...ts,
-  ...pluginVue.configs['flat/strongly-recommended'],
+const config = defineConfig(
+  ts,
+  pluginVue.configs['flat/strongly-recommended'],
+  // @ts-expect-error
   unocss,
   {
     settings: {
@@ -83,6 +82,6 @@ const config = [
       ],
     },
   },
-]
+)
 
 export default config
