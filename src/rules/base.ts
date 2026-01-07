@@ -1,15 +1,16 @@
+import { defineConfig } from 'eslint/config'
 import js from '@eslint/js'
-import { flatConfigs as importx } from 'eslint-plugin-import-x'
+import { importX } from 'eslint-plugin-import-x'
 
 import stylistic from './stylistic.js'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
+
+const config = defineConfig(
   js.configs.recommended,
-  importx.recommended,
+  // @ts-expect-error
+  importX.flatConfigs.recommended,
   {
+    name: '@haixee/base/ignores',
     ignores: [
       '**/.git/**',
       '**/.yarn/**',
@@ -18,6 +19,7 @@ const config = [
     ],
   },
   {
+    name: '@haixee/base/rules',
     languageOptions: {
       ecmaVersion: 2024,
     },
@@ -67,7 +69,7 @@ const config = [
       ],
     },
   },
-  ...stylistic,
-]
+  stylistic,
+)
 
 export default config

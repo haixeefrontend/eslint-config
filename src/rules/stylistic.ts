@@ -1,9 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin'
+import { defineConfig } from 'eslint/config'
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
+const config = defineConfig(
   stylistic.configs.customize({
     arrowParens: true,
     blockSpacing: true,
@@ -14,6 +12,7 @@ const config = [
     jsx: true,
   }),
   {
+    name: '@haixee/stylistic/rules',
     rules: {
       'comma-dangle': 'off',
       'quotes': 'off',
@@ -36,6 +35,6 @@ const config = [
       '@stylistic/multiline-comment-style': 'warn',
     },
   },
-]
+)
 
 export default config
