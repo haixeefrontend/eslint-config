@@ -4,7 +4,7 @@ import vue from './vue.js'
 
 
 const config = defineConfig(
-  ...vue,
+  vue,
   {
     languageOptions: {
       globals: {

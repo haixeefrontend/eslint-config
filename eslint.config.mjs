@@ -1,6 +1,8 @@
-import haixee from './index.js'
+import { defineConfig } from 'eslint/config'
 
-export default [
-  ...haixee.configs.node,
-  ...haixee.configs.typescript,
-]
+import haixee from './dist/index.js'
+
+export default defineConfig(
+  haixee.configs.node,
+  haixee.configs.typescript,
+)

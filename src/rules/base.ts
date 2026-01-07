@@ -67,7 +67,7 @@ const config = defineConfig(
       ],
     },
   },
-  ...stylistic,
+  stylistic,
 )
 
 export default config
