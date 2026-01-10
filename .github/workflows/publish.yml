@@ -30,7 +30,7 @@ jobs:
       - name: Build Package
         run: yarn build
 
-        # Upgrade NPM to the latest version wo we could use trusted publishers feature
+        # Upgrade NPM to the latest version so we could use trusted publishers feature
       - name: Upgrade NPM
         run: npm install -g npm@latest
 
@@ -54,11 +54,11 @@ jobs:
       - name: Pack Package
         if: ${{ steps.publish.outputs.type }}
         run: |
-          yarn pack
+          yarn pack --out '%s-%v.tgz'
 
       - name: Publish to Release
         if: ${{ steps.publish.outputs.type }}
         uses: softprops/action-gh-release@v2
         with:
-          files: eslint-config-*.tgz
+          files: '*.tgz'
           tag_name: ${{ env.PACKAGE_VERSION }}
