@@ -79,7 +79,7 @@ const config = defineConfig(
       'vue/block-order': [
         'error',
         {
-          order: ['script[setup]', 'template', 'script', 'style'],
+          order: ['script[setup]', 'script', 'template', 'style'],
         },
       ],
     },
